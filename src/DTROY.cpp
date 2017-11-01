@@ -179,8 +179,8 @@ struct DTROY : Module {
 	void randomize() override {
 		for (int i = 0; i < 8; i++) {
 			params[DTROY::TRIG_PITCH_PARAM + i].value = getOneRandomNoteInScale();
-			params[DTROY::TRIG_COUNT_PARAM + i].value = static_cast<int>(std::round(randomf()*7));
-			params[DTROY::TRIG_TYPE_PARAM + i].value = static_cast<int>(std::round(randomf()*3));
+			params[DTROY::TRIG_COUNT_PARAM + i].value = static_cast<int>(round(randomf()*7));
+			params[DTROY::TRIG_TYPE_PARAM + i].value = static_cast<int>(round(randomf()*3));
 			params[DTROY::TRIG_SLIDE_PARAM + i].value = (randomf() > 0.7);
 			params[DTROY::TRIG_SKIP_PARAM + i].value = (randomf() > 0.8);
 		}
